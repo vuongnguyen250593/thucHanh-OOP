@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // cách cũ
+        // let Rectangle = function(width,height) {
+        //     this.width = width;
+        //     this.height = height;
+
+        //     this.getWidth = function () {
+        //         return width;
+        //     }
+        //     this.getHeight = function () {
+        //         return height;
+        //     }
+        //     this.getArea = function () {
+        //         return width * height;
+        //     }
+        // }
+
+        // let rectangle = new Rectangle(2,3);
+        // let width = rectangle.getWidth();
+        // let height = rectangle.getHeight();
+        // let area = rectangle.getArea();
+        // alert("area = " + area);
+
+        // cách mới
+        class Rectangle {
+            width
+            height
+            constructor (width,height) {
+                this.width = width;
+                this.height = height;
+            }
+            getWidth() {
+                return this.width;
+            }
+            getHeight() {
+                return this.height;
+            }
+            getArea() {
+                return this.width * this.height;
+            }
+            getPerimeter() {
+                return (this.width + this.height) * 2
+            }
+        }
+    </script>
+</body>
+</html>
